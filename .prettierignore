@@ -1,0 +1,9 @@
+node_modules/
+dist
+**/scripts/*.js
+*.css
+*.svg
+*.png
+charting_library
+socket.js
+datafeeds
