@@ -1,4 +1,6 @@
-const { defineConfig } = require('eslint-define-config')
+const {
+  defineConfig
+} = require('eslint-define-config')
 
 module.exports = defineConfig({
   root: true,
@@ -17,7 +19,8 @@ module.exports = defineConfig({
     },
   },
   extends: [
-    'plugin:react/recommended', 
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:mocha/recommended',
@@ -27,7 +30,12 @@ module.exports = defineConfig({
     'react/display-name': ['off'],
     'react-hooks/exhaustive-deps': 'off',
     'import/no-extraneous-dependencies': ['off'],
-    '@typescript-eslint/no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
+    '@typescript-eslint/no-empty-function': [
+      'warn',
+      {
+        allow: ['arrowFunctions'],
+      },
+    ],
     'react/jsx-filename-extension': [
       'warn',
       {
@@ -76,6 +84,6 @@ module.exports = defineConfig({
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
       },
-    ]
+    ],
   },
 })
